@@ -25,4 +25,12 @@ class Project extends Model
             ]
         );
     }
+
+    public function getOwner()
+    {
+        $owner = User::where('id', $this->owner_id);
+
+        return $owner;
+    }
+
 }
