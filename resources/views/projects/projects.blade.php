@@ -18,6 +18,8 @@
                         <a href="/projects/{{$project['id']}}">{{ $project['project_name'] }}</a>
                     </th>
                     <td>{{ $project['description'] }}</td>
+                    <!-- $project['owner_id']-->
+                <!--<td>$project->getOwner['id']</td>-->
                 </tr>
             @endforeach
             </tbody>
