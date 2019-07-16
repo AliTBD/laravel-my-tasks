@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="62850589-d7cb-4ea4-ad2d-eea1131ab677" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-    </list>
+    <list default="true" id="62850589-d7cb-4ea4-ad2d-eea1131ab677" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -284,7 +282,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="yarn" />
-    <property name="settings.editor.selected.configurable" value="settings.github" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -326,12 +324,12 @@
       <workItem from="1561028436063" duration="48225000" />
       <workItem from="1561621386130" duration="43674000" />
       <workItem from="1562756963691" duration="286000" />
-      <workItem from="1563092880319" duration="4543000" />
+      <workItem from="1563092880319" duration="5042000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="145207000" />
+    <option name="totallyTimeSpent" value="145706000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -344,13 +342,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49887386" visible="true" weight="0.20842217" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49887386" visible="true" weight="0.20842217" />
       <window_info id="Structure" order="1" sideWeight="0.5011261" side_tool="true" weight="0.32603937" />
       <window_info id="Favorites" order="2" sideWeight="0.5011261" side_tool="true" weight="0.32603937" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="1" />
-      <window_info anchor="bottom" id="Version Control" order="2" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="2" visible="true" weight="0.5362162" />
       <window_info anchor="bottom" id="Terminal" order="3" weight="0.22598253" />
       <window_info anchor="bottom" id="Event Log" order="4" side_tool="true" weight="0.32998884" />
       <window_info anchor="bottom" id="Message" order="5" />
