@@ -9,6 +9,7 @@
             <tr>
                 <th scope="col">Project Name</th>
                 <th scope="col">Project Description</th>
+                <th scope="col">Owner Name</th>
             </tr>
             </thead>
             <tbody>
@@ -19,7 +20,7 @@
                     </th>
                     <td>{{ $project['description'] }}</td>
                     <!-- $project['owner_id']-->
-                <!--<td>$project->getOwner['id']</td>-->
+                    <td>{{ App\User::where('id', $project['owner_id'])->first()->name }}</td>
                 </tr>
             @endforeach
             </tbody>

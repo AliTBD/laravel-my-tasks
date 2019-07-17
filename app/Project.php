@@ -26,9 +26,11 @@ class Project extends Model
         );
     }
 
-    /*public function getOwner()
+    public function getOwner()
     {
+        //$owner = User::where('id', $this->owner_id)->get();
+
         return $this->belongsTo(User::class);
-    }*/
+    }
 
 }
