@@ -5,7 +5,7 @@
 @section('content')
     @if($projects->count() > 0)
         <table class="table table-hover table-bordered">
-            <thead class="thead-dark">
+            <thead class="thead">
             <tr>
                 <th scope="col">Project Name</th>
                 <th scope="col">Project Description</th>

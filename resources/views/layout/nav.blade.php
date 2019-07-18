@@ -1,4 +1,4 @@
-<div class="shadow py-0 mb-5 sticky-top" style="background: white">
+<div class="shadow py-0 mb-5 sticky-top border-bottom border-dark" style="background: white">
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light bg-light ">
 

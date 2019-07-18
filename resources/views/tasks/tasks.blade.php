@@ -5,7 +5,7 @@
 @section('content')
     @if($tasks->count() >0)
         <table class="table table-hover table-bordered">
-            <thead class="thead-dark">
+            <thead class="thead">
             <tr>
                 <th scope="col">Task Name</th>
                 <th scope="col">Task Description</th>

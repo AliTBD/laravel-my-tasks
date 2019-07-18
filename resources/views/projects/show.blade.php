@@ -7,11 +7,13 @@
     {{ $project->description }}
     <br><br><br>
     <div>
-        <h5>Tasks:</h5>
         <br>
         @if($project->tasks->count() > 0)
-            <table class="table table-hover table-bordered">
-                <thead class="thead-dark">
+            <table class="table table-hover table-bordered border border-dark">
+                <thead class="thead">
+                <tr>
+                    <th scope="col" colspan="3"><div class="text-center">Tasks</div></th>
+                </tr>
                 <tr>
                     <th scope="col">Done</th>
                     <th scope="col">Task Name</th>
@@ -21,7 +23,7 @@
                 <tbody>
                 @foreach($project->tasks as $task)
                     <tr class={{ $task['done'] === 1 ? 'table-success' : 'table-danger' }}>
-                        <th>
+                        <td>
                             <form method="POST" action="/projects/{{$project->id}}/tasks/{{$task->id}}">
                                 @method('PATCH')
                                 @csrf
@@ -29,7 +31,7 @@
                                     <input class="form-check-input" type="checkbox" value="" id="done" name="done" onchange="this.form.submit()" {{ $task['done'] === 1 ? 'checked' : '' }}>
                                 </div>
                             </form>
-                        </th>
+                        </td>
                         <td>
                             <a href="/tasks/{{$task['id']}}">{{ $task['task_name'] }}</a>
                         </td>
@@ -45,7 +47,7 @@
             <br>
         @endif
         <br>
-        <div class="border border-secondary rounded-lg" style="padding: 25px;">
+        <div class="border border-dark rounded-lg" style="padding: 25px;">
             <form method="POST" action="/projects/{{$project->id}}/tasks">
                 @csrf
                 <h5 style="text-align: center;">Create a new Task</h5>
