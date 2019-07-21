@@ -5,7 +5,7 @@
 @section('content')
 
     {{ $project->description }}
-    <br><br><br>
+    <br>
     <div>
         <br>
         @if($project->tasks->count() > 0)
