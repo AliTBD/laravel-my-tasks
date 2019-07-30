@@ -20,7 +20,8 @@
                     </th>
                     <td>{{ $project['description'] }}</td>
                     <!-- $project['owner_id']-->
-                    <td>{{ App\User::where('id', $project['owner_id'])->first()->name }}</td>
+                    <!-- App\User::where('id', $project['owner_id'])->first()->name -->
+                    <td>{{ @$project->getOwner->name }}</td>
                 </tr>
             @endforeach
             </tbody>

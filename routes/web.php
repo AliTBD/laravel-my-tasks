@@ -17,7 +17,7 @@ Route::delete('/tasks/{id}', 'PagesController@destroy');
 */
 
 
-Route::get('/', 'PagesController@home');
+Route::get('/', 'HomeController@index');
 Route::get('/about', 'PagesController@about');
 
 Route::resource('tasks', 'TasksController');
@@ -27,5 +27,3 @@ Route::patch('/projects/{project}/tasks/{task}', 'ProjectTasksController@update'
 Route::post('/projects/{project}/tasks','ProjectTasksController@store');
 
 Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
