@@ -30,7 +30,7 @@ class Project extends Model
     {
         //$owner = User::where('id', $this->owner_id)->get();
 
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(User::class,'owner_id');
     }
 
 }
