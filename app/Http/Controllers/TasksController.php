@@ -22,18 +22,14 @@ class TasksController extends Controller
 
     public function index()
     {
-        $tasks = Task::all();
+        $tasks = collect();
+        $projects = Project::where('owner_id', auth()->id())->get();
 
-        /*$tasks = Project::where('owner_id', auth()->id())
-                           ->join('tasks', 'projects.id', '=', 'tasks.project_id')
-                           ->select('tasks.task_name', 'tasks.description')->get();*/
-
-
-        /*$tasks =
-            DB::table('projects')
-              ->join('tasks', 'projects.id', '=', 'tasks.project_id')
-              ->select('tasks.task_name', 'tasks.description')
-              ->where('projects.owner_id', '=', auth()->id());*/
+        foreach ($projects as $project){
+            foreach ($project->tasks as $task){
+                $tasks->push($task);
+            }
+        }
 
         return view('tasks.tasks', ['tasks' => $tasks]);
     }
