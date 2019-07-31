@@ -9,10 +9,13 @@
     <div>
         <br>
         @if($project->tasks->count() > 0)
-            <table class="table table-hover table-bordered border border-dark">
+            <br>
+            <table class="table table-hover table-bordered">
                 <thead class="thead">
                 <tr>
-                    <th scope="col" colspan="3"><div class="text-center">Tasks</div></th>
+                    <th scope="col" colspan="3">
+                        <div class="text-center">Tasks</div>
+                    </th>
                 </tr>
                 <tr>
                     <th scope="col">Done</th>
@@ -42,6 +45,11 @@
                 @endforeach
                 </tbody>
             </table>
+            <div class="border border-dark rounded-lg" style="padding: 25px;">
+                <h5 class="text-dark text-center">Project progress</h5>
+                <br>
+                <div id="piechart" class='d-flex justify-content-center' style="width: 100%; height: 100%;"></div>
+            </div>
         @else
             There is no tasks !!
             <br>
@@ -71,5 +79,27 @@
         @csrf
         <button type="submit" class="btn btn-primary btn-block">Edit Project</button>
     </form>
+
+    <script type="text/javascript">
+        google.charts.load('current', {'packages': ['corechart']});
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+
+            var data = google.visualization.arrayToDataTable([
+                ['Task', 'Complete'],
+                ['Yes',     {{ $project->tasks->where('done', 1)->count() }}],
+                ['No',      {{ $project->tasks->where('done', 0)->count() }}]
+            ]);
+
+            var options = {
+                colors: ['#008000', '#f00']
+            };
+
+            var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+            chart.draw(data, options);
+        }
+    </script>
 
 @endsection
