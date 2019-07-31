@@ -19,8 +19,6 @@
                         <a href="/projects/{{$project['id']}}">{{ $project['project_name'] }}</a>
                     </th>
                     <td>{{ $project['description'] }}</td>
-                    <!-- $project['owner_id']-->
-                    <!-- App\User::where('id', $project['owner_id'])->first()->name -->
                     <td>{{ @$project->getOwner->name }}</td>
                 </tr>
             @endforeach
