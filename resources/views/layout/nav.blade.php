@@ -37,7 +37,8 @@
                             </a>
 
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item text-dark" href="/projects">My project</a>
+                                <a class="dropdown-item text-dark" href="/projects">My projects</a>
+                                <a class="dropdown-item text-dark" href="/tasks">My tasks</a>
                                 <a class="dropdown-item text-dark" href="{{ route('logout') }}"
                                    onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
