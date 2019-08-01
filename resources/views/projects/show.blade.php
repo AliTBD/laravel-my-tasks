@@ -10,6 +10,12 @@
         <br>
         @if($project->tasks->count() > 0)
             <br>
+            <div class="border border-dark rounded-lg" style="padding: 25px;">
+                <h5 class="text-dark text-center">Project progress</h5>
+                <br>
+                <div id="piechart" class='d-flex justify-content-center'></div>
+            </div>
+            <br>
             <table class="table table-hover table-bordered">
                 <thead class="thead">
                 <tr>
@@ -45,11 +51,7 @@
                 @endforeach
                 </tbody>
             </table>
-            <div class="border border-dark rounded-lg" style="padding: 25px;">
-                <h5 class="text-dark text-center">Project progress</h5>
-                <br>
-                <div id="piechart" class='d-flex justify-content-center'></div>
-            </div>
+
         @else
             There is no tasks !!
             <br>
@@ -93,7 +95,7 @@
             ]);
 
             var options = {
-                width: '100%',
+                width : '100%',
                 height: '100%',
                 colors: ['#008000', '#f00']
             };
